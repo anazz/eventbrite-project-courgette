@@ -1,0 +1,25 @@
+<p>Tu peux créer un événement ici </p>
+
+<p>Il te faut remplir le formulaire ci-dessous : </p>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@event) do |f| %>
+
+      <%= f.label :"Rentre la description de l'événement ici :" %>
+      <br/>
+      <%= f.text_area :description, class: 'form-control' %>
+      <br/>
+      <%= f.label :"Rentre la date de l'événement au format anee-mois-jour :" %>
+      <br/>
+      <%= f.text_field :date, class: 'form-control' %>
+      <br/>
+      <%= f.label :"Rentre le lieu où il se déroule ici :" %>
+      <br/>
+      <%= f.text_field :place, class: 'form-control' %>
+      <br/>
+
+      <%= f.submit "Créer un événement", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

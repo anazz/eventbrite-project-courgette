@@ -1,0 +1,16 @@
+<h1>Retrouve ici tous les events!</h1>
+<% y = 1 %>
+<% @events.each do |event| %>
+<p>Événement numéro <%= y %> : </p>
+<p>Description de l'événement : </p>
+<%= event.description %>
+<p>Date de l'événement : </p>
+<%= event.date %>
+<p>Lieu de l'événement : </p>
+<%= event.place %>
+<% y = y+1 %>
+ <br>
+ -------------------------------
+  <br>
+  <br>
+<%end%>

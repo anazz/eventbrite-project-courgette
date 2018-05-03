@@ -1,0 +1,27 @@
+<h2>🐤 🐣 🐥 🐤 🐣 🐥 🐤 🐣 🐥 🐤 🐣 🐥 🐤 🐣 🐥 🐤 🐣 🐥 🐤 🐣 🐥</h2>
+
+<h1>Bienvenue sur ta page <%= @user.name %> 🦉</h1>
+
+<p>Que veux tu faire :</p>
+
+<p>- Créer un événement, <a href="<%= new_event_path %> " >clique ici</a>
+<p>- Voir la liste des événements, <a href="<%= events_path %>" >clique ici</a>
+<br>
+<br>
+<h1> Voici la liste des événements que tu as déjà créés </h1>
+<% y = 1 %>
+<% @events.each do |event| %>
+<p>Événement numéro <%= y %> : </p>
+<p>Description de l'événement : </p>
+<%= event.description %>
+<p>Date de l'événement : </p>
+<%= event.date %>
+<p>Lieu de l'événement : </p>
+<%= event.place %>
+<% y = y+1 %>
+ <br>
+ -------------------------------
+  <br>
+  <br>
+<%end%>
+
